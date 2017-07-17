@@ -36,4 +36,11 @@ operator~(const Query &operand) {
 	return shared_ptr<QueryBase>(new NotQuery(operand));
 }
 
+inline Query operator&(const Query &lhs, const Query &rhs) {
+	return shared_ptr<QueryBase>(new AndQuery(lhs, rhs));
+}
+
+inline Query operator|(cosnt Query &lhs, const Query &rhs) {
+	return shared_ptr<QueryBase>(new OrQuery(lhs, rhs));
+}
 #endif

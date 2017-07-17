@@ -12,7 +12,7 @@ protected:
 			+ " " + opSym 
 			+ " " + rhs.rep() + ")"; }
 	Query lhs, rhs;			// 左侧运算和右侧运算对象
-	string opSym;
+	string opSym;			// 运算符的名字
 };
 
 #endif
